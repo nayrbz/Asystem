@@ -1,0 +1,50 @@
+<template name="nav">
+  <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"> Asistencia Express</a>
+            </div>
+             <div class="collapse navbar-collapse" id="navigation"> 
+                 <ul class="nav navbar-nav navbar" id="side-menu">
+                        <li>
+                            <a href="/" class="active">
+                            <i class="fa fa-dashboard fa-fw"></i> Inicio</a>
+                        </li>                      
+                        <li>
+                            <a  href="/asistencia">
+                            <i class="fa fa-table fa-fw"></i> Asistencia</a>
+                        </li>
+                        <li>
+                            <a  href="/cursos">
+                            <i class="fa fa-edit fa-fw"></i> Cursos</a>
+                        </li>
+                         <li>
+                            <a  href="/usuarios">
+                            <i class="fa fa-users fa-fw"></i> Usuarios</a>
+                        </li>   
+                         <li>
+                            <a  href="/admin">
+                            <i class="fa fa-cogs fa-fw"></i> Administracion</a>
+                        </li>                     
+                    </ul>              
+              <ul class="nav navbar-nav navbar-right">
+                {{> loginButtons}}
+              </ul>
+            </div>            
+            <div class="navbar-default sidebar" role="navigation">
+                 
+                <!--<div class="sidebar-nav navbar-collapse">
+                   
+                </div>-->
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+    <!-- /.navbar-header -->
+</template>

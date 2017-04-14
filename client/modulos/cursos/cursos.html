@@ -1,0 +1,86 @@
+<template name="cursos">
+  <div class="row">
+  	<div class="page-header">
+  		<h1> Cursos </h1>
+  	</div>  	
+  </div>
+  <div class="row">
+  	  <div class="row ">
+      <div class="col-lg-12">
+        
+       <table>
+        <tr>
+          <td> CODIGO </td>
+          <td> NOMBRE</td>
+          <td> GRUPO</td>
+          <td> HORARIO</td>
+          <td> JORNADA</td>
+          <td> Mostrar</td>
+        </tr>
+      
+
+        {{#each ListaCursos}}
+        <tr>  
+          <td>	{{codigo}}</td>
+          <td>	{{nombre}}</td>
+          <td>	{{grupo}}</td>
+          <td> 	{{horario}}</td>
+          <td> 	{{jornada}}</td>
+          <td> 	
+          	<button class="button" data-toggle="modal" data-target="#{{_id}}"> Visualizar QR</button>
+          	<!-- Modal -->
+			  <div class="modal fade" id="{{_id}}" role="dialog">
+			    <div class="modal-dialog">
+			    
+			      <!-- Modal content-->
+			      <div class="modal-content center">
+			        <div class="modal-header">
+			          <button type="button" class="close" data-dismiss="modal">&times;</button>
+			          <h4 class="modal-title">Curso de {{nombre}}</h4>
+			        </div>
+			        <div class="modal-body center">
+               <div class="form-group">
+                <label for="semana">Seleccion la Semana:</label>
+                <select class="form-control semana" id="semana">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10</option>
+                  <option>11</option>
+                  <option>12</option> 
+                  <option>13</option>
+                  <option>14</option>
+                  <option>15</option>
+                </select>
+              </div>
+
+              {{#if VerQr}}
+				       {{> QRCode text=datoQr }}
+              {{/if}}
+              
+			        </div>
+
+			        <div class="modal-footer">
+			          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+			        </div>
+			      </div>
+			      
+			    </div>
+			  </div>
+          	
+          </td>
+        </tr>
+          {{/each}}
+      </table>
+      </div>
+    </div>
+  </div>
+  
+</template>
+

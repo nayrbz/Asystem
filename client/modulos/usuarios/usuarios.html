@@ -1,0 +1,27 @@
+<template name="usuarios">
+  <h1> USUARIOS </h1> 
+  <table>
+    <tr>
+      <td> FECHA </td>
+      <!--<td> NOMBRE</td>-->
+      <td> CEDULA</td>
+      <td> CURSO</td>
+    </tr>
+   
+    <tr>
+      <td> pruebaFecha </td>
+      <!--<td> pruebaNom </td>-->
+      <td> pruebaCed </td>
+      <td> pruebaCur </td>
+    </tr>
+
+     {{#each AsistenciaHot}}
+     <tr>  
+      <td>{{fecha}}</td>
+      <!--<td>{{nombre}}</td>-->
+      <td> {{cedula}}</td>
+      <td> {{curso}}</td>
+    </tr>
+      {{/each}}
+  </table>
+</template>

@@ -1,2 +1,2 @@
-# Asistencia_express_qr
+# Asistencia Express QR
 Proyecto final 
